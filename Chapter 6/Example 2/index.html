@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="
+    https://pixijs.download/v6.1.1/pixi.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const app = new PIXI.Application({
+    width:1500,
+    height:750,
+});
+
+document.body.appendChild(app.view);
+// const frames = [];
+
+const loader = new PIXI.Loader();
+for(let i=0;i<=59;i++){
+     loader.add(`frames${i}`,`../assets/01/meteor_${i}.gif`);
+}
+loader.load((loader,resources)=>{
+    const frames =[];
+    for(let i=0;i<=59;i++){
+        frames.push(resources[`frames${i}`].texture);
+    }
+    const animated = new PIXI.AnimatedSprite(frames);
+    animated.x = 10
+    animated.y = 200
+    animated.animationSpeed = 1
+    animated.play();
+    app.stage.addChild(animated);
+}); 
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+shine.png
+size: 1545,4774
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light
+  rotate: false
+  xy: 2, 2
+  size: 1541, 4770
+  orig: 1541, 4770
+  offset: 0, 0
+  index: -1
