@@ -1,23 +1,28 @@
-// Import PixiJS
-// import * as PIXI from './pixi.js'
-
-// Create the application
-const app = new PIXI.Application({
-    width: 800, 
-    height: 600, 
-    backgroundColor: 0x1099bb 
-});
+// Create a new PIXI application
+const app = new PIXI.Application({ width: 800, height: 600 });
 document.body.appendChild(app.view);
-const texture =  PIXI.Texture.from('../assets/bunny.png');
+// Create a sprite
+const texture = PIXI.Texture.from('../assets/boy.png');
 const sprite = new PIXI.Sprite(texture);
-// Position the sprite
+// Enable interactivity
+sprite.interactive = true;
+sprite.buttonMode = true; // Shows a pointer cursor on hover
+// Add event listeners
+sprite.on('pointerdown', (event) => {
+    sprite.tint = 0xff0000; 
+});
+sprite.on('pointerover', (event) => {
+    sprite.tint = 0x00ff00; // Change tint on hover
+});
+sprite.on('pointerout', (event) => {
+    sprite.tint = 0xffffff; // Reset tint when not hovered
+});
+// Position and add the sprite to the stage
 sprite.x = 100;
 sprite.y = 100;
-// Add the sprite to the stage
 app.stage.addChild(sprite);
-// Use GSAP to animate the sprite
-gsap.to(sprite, { x: 600, y: 400, duration: 2, ease: 'power2.inOut' });
-const text = new PIXI.Text('This is Tween Animation', {
+
+const text = new PIXI.Text('Take your mouse over\n the boy and click it!!', {
     fontFamily: 'Arial',
     fontSize: 36,
     fill: 0xffffff,

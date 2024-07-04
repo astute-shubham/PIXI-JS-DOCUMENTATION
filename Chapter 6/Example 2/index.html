@@ -3,47 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="
-    https://pixijs.download/v6.1.1/pixi.min.js"></script>
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi-spine/3.0.5/pixi-spine.min.js"></script> -->
 </head>
 <body>
-   <script>
-    const app = new PIXI.Application({
-    width:1500,
-    height:750,
-});
-
-document.body.appendChild(app.view);
-// const frames = [];
-
-const loader = new PIXI.Loader();
-for(let i=0;i<=59;i++){
-     loader.add(`frames${i}`,`../assets/01/meteor_${i}.gif`);
-}
-loader.load((loader,resources)=>{
-    const frames =[];
-    for(let i=0;i<=59;i++){
-        frames.push(resources[`frames${i}`].texture);
-    }
-    const animated = new PIXI.AnimatedSprite(frames);
-    animated.x = 10
-    animated.y = 200
-    animated.animationSpeed = 1
-    animated.play();
-    app.stage.addChild(animated);
-}); 
-const text = new PIXI.Text('This is Frame Spritesheet Animation', {
-    fontFamily: 'Arial',
-    fontSize: 36,
-    fill: 0xffffff,
-    align: 'center'
-});
-// Position the text
-text.x = 300;
-text.y = 50;
-// Add the text to the stage
-app.stage.addChild(text);
-</script>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

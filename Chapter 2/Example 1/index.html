@@ -15,25 +15,26 @@
 });
 
 document.body.appendChild(app.view);
-// const frames = [];
 
 const loader = new PIXI.Loader();
-for(let i=0;i<=59;i++){
-     loader.add(`frames${i}`,`../assets/01/meteor_${i}.gif`);
+loader.add('boy', '../assets/boy.png').add('boy2', '../assets/boy2.png').add('bunny','../assets/bunny.png')
+    .load(setup);
+
+function setup(loader, resources) {
+    
+    let boy = new PIXI.Sprite(resources.boy.texture);
+    let boy2 = new PIXI.Sprite(resources.boy2.texture);
+    let bunny = new PIXI.Sprite(resources.bunny.texture);
+
+     
+    boy.position.set(0);
+    boy2.position.set(900,0);
+    bunny.position.set(550,400);
+    app.stage.addChild(boy,boy2,bunny);
 }
-loader.load((loader,resources)=>{
-    const frames =[];
-    for(let i=0;i<=59;i++){
-        frames.push(resources[`frames${i}`].texture);
-    }
-    const animated = new PIXI.AnimatedSprite(frames);
-    animated.x = 10
-    animated.y = 200
-    animated.animationSpeed = 1
-    animated.play();
-    app.stage.addChild(animated);
-}); 
-const text = new PIXI.Text('This is Frame Spritesheet Animation', {
+
+
+const text = new PIXI.Text('Using Loader you can load assets', {
     fontFamily: 'Arial',
     fontSize: 36,
     fill: 0xffffff,

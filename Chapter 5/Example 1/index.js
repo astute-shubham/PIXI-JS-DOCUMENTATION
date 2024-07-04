@@ -8,20 +8,23 @@ const app = new PIXI.Application({
     backgroundColor: 0x1099bb 
 });
 document.body.appendChild(app.view);
-
-// Create a loader instance
-const loader = new PIXI.Loader();
-// Add an image to the loader
-loader.add('exampleImage', '../assets/bunny.png');
-// Load the image
-loader.load((loader, resources) => {
-    // Create a sprite from the loaded texture
-    const sprite = new PIXI.Sprite(resources.exampleImage.texture);
-
-    // Position the sprite
-    sprite.x = 100;
-    sprite.y = 100;
-
-    // Add the sprite to the stage
-    app.stage.addChild(sprite);
+const texture =  PIXI.Texture.from('../assets/bunny.png');
+const sprite = new PIXI.Sprite(texture);
+// Position the sprite
+sprite.x = 100;
+sprite.y = 100;
+// Add the sprite to the stage
+app.stage.addChild(sprite);
+// Use GSAP to animate the sprite
+gsap.to(sprite, { x: 600, y: 400, duration: 2, ease: 'power2.inOut' });
+const text = new PIXI.Text('This is Tween Animation', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
 });
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);
