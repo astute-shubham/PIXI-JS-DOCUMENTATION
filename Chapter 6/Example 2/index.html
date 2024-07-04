@@ -33,6 +33,17 @@ loader.load((loader,resources)=>{
     animated.play();
     app.stage.addChild(animated);
 }); 
+const text = new PIXI.Text('This is Frame Spritesheet Animation', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);
 </script>
 </body>
 </html>

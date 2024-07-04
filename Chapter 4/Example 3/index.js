@@ -36,3 +36,14 @@ graphics.drawPolygon([
 graphics.endFill();
 // Add the graphics to the stage
 app.stage.addChild(graphics);
+const text = new PIXI.Text('These are how you\ncan make advanced\ngraphics!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 300;
+// Add the text to the stage
+app.stage.addChild(text);

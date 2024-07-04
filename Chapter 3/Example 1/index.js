@@ -18,3 +18,14 @@ sprite.x = 150;
 sprite.y = 200;
 // Add the sprite to the stage
 app.stage.addChild(sprite);
+const text = new PIXI.Text('This is how you \ncan set coordinates!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

@@ -16,3 +16,14 @@ sprite.alpha = 0.5; // 50% transparent
 sprite.tint = 0xff0000; // Red tint
 // Add the sprite to the stage
 app.stage.addChild(sprite);
+const text = new PIXI.Text('Alpha And tinting!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

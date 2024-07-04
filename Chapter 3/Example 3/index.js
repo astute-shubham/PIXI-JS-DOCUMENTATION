@@ -17,3 +17,14 @@ sprite.x = 150;
 sprite.rotation = Math.PI / 4; // Rotate 45 degrees
 // Add the sprite to the stage
 app.stage.addChild(sprite);
+const text = new PIXI.Text('I am Rotated now!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

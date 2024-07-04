@@ -21,3 +21,14 @@ graphics.moveTo(200, 200); // Start at (200, 200)
 graphics.arcTo(300, 100, 400, 300, 100); // Control points and radius
 // Add the graphics to the stage
 app.stage.addChild(graphics);
+const text = new PIXI.Text('These are lines and curves!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

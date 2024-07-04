@@ -16,3 +16,14 @@ sprite.scale.x = 2; // Double the width
 sprite.scale.y = 0.5; // Half the height
 // Add the sprite to the stage
 app.stage.addChild(sprite);
+const text = new PIXI.Text('I am Short Now', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 300;
+// Add the text to the stage
+app.stage.addChild(text);

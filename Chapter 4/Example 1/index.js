@@ -20,3 +20,14 @@ graphics.drawCircle(200, 200, 50); // x, y, radius
 graphics.endFill();
 // Add the graphics to the stage
 app.stage.addChild(graphics);
+const text = new PIXI.Text('These are Shapes!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

@@ -21,7 +21,7 @@ sprite.on('pointerdown', () => {
 });
 // Add the sprite to the stage
 app.stage.addChild(sprite);
-const text = new PIXI.Text('Click the Boy to \n see the magic!!', {
+const text = new PIXI.Text('Click the Boy to \n see the magic!!\n This is Interactivity \n Go to Chapter 7 to \nlearn more', {
     fontFamily: 'Arial',
     fontSize: 36,
     fill: 0xffffff,

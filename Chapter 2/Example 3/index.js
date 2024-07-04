@@ -21,6 +21,17 @@ text.x = 100;
 text.y = 50;
 // Add the text to the stage
 app.stage.addChild(text);
+const newtext = new PIXI.Text('Adding texts', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xff0000,
+    align: 'center'
+});
+// Position the text
+newtext.x = 300;
+newtext.y = 50;
+// Add the text to the stage
+app.stage.addChild(newtext);
 
 
 

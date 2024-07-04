@@ -25,3 +25,15 @@ window.addEventListener('keydown', (event) => {
             break;
     }
 });
+
+const text = new PIXI.Text('Can you try to \npress arrow keys?', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

@@ -26,3 +26,14 @@ app.stage.addChild(container);
 // Position the container
 container.x = 200;
 container.y = 200;
+const text = new PIXI.Text('You can add multiple Sprites', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

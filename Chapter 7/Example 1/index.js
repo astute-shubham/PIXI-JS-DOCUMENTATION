@@ -21,3 +21,15 @@ sprite.on('pointerout', (event) => {
 sprite.x = 100;
 sprite.y = 100;
 app.stage.addChild(sprite);
+
+const text = new PIXI.Text('Take your mouse over\n the boy and click it!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

@@ -45,3 +45,14 @@ stopButton.on('pointerdown', () => {
     sound.stop();
 });
 app.stage.addChild(stopButton);
+const text = new PIXI.Text('This is Sound \nPlayback Controller', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);

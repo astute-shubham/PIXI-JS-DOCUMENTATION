@@ -29,6 +29,17 @@
         sprite.y = app.screen.height / 2;
 
         app.stage.addChild(sprite);
-    </script>
+        const text = new PIXI.Text('Using CDN Links \n you can import PIXI!!', {
+        fontFamily: 'Arial',
+        fontSize: 36,
+        fill: 0xffffff,
+        align: 'center'
+    });
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);
+</script>
 </body>
 </html>

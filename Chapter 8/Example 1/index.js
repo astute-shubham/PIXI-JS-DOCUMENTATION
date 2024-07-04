@@ -29,3 +29,14 @@ sprite.on('pointerdown', () => {
 sprite.x = 100;
 sprite.y = 100;
 app.stage.addChild(sprite);
+const text = new PIXI.Text('Click the bunny \nto hear something!!', {
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fill: 0xffffff,
+    align: 'center'
+});
+// Position the text
+text.x = 300;
+text.y = 50;
+// Add the text to the stage
+app.stage.addChild(text);
